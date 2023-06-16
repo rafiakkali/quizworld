@@ -1,7 +1,9 @@
 /* CSS styles for the quiz container */
 #quiz-container {
-  width: 75vw; /* Adjust the width as desired */
-  height: calc(75vw * 4 / 3); /* Calculate height based on width and aspect ratio */
+  width: 100vw;
+  height: calc(100vw * 4 / 3);
+  max-width: 100%;
+  max-height: calc(100vh - 20px);
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -11,7 +13,12 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 }
+
+/* Rest of the CSS styles remain the same */
+
+
 
 /* CSS styles for the question and answer elements */
 #question {
