@@ -21,7 +21,7 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 5vw; /* Adjust the font size as desired */
+  font-size: 10vw; /* Adjust the font size as desired */
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
@@ -36,21 +36,21 @@
 #options-container p {
   margin: 5px 0;
   color: #555;
-  font-size: 4vw; /* Adjust the font size as desired */
+  font-size: 8vw; /* Adjust the font size as desired */
 }
 
 /* CSS styles for the answer element */
 #answer {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 4.5vw; /* Adjust the font size as desired */
+  font-size: 9vw; /* Adjust the font size as desired */
   color: #008000;
   text-align: left; /* Align the answer to the left */
 }
 
 /* CSS styles for the timer element */
 #timer {
-  font-size: 8vw; /* Adjust the font size as desired */
+  font-size: 16vw; /* Adjust the font size as desired */
   font-weight: bold;
   color: #FF4500;
   text-align: center;
@@ -64,7 +64,7 @@
   padding: 10px 20px;
   background-color: #4caf50;
   color: #fff;
-  font-size: 5vw; /* Adjust the font size as desired */
+  font-size: 10vw; /* Adjust the font size as desired */
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -88,18 +88,18 @@
   }
   
   #question {
-    font-size: 6vw; /* Adjust the font size as desired */
+    font-size: 12vw; /* Adjust the font size as desired */
   }
 
   #options-container p {
-    font-size: 5vw; /* Adjust the font size as desired */
+    font-size: 10vw; /* Adjust the font size as desired */
   }
 
   #answer {
-    font-size: 5.5vw; /* Adjust the font size as desired */
+    font-size: 11vw; /* Adjust the font size as desired */
   }
 
   #timer {
-    font-size: 9vw; /* Adjust the font size as desired */
+    font-size: 18vw; /* Adjust the font size as desired */
   }
 }
