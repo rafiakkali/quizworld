@@ -21,7 +21,7 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 10vw; /* Adjust the font size as desired */
+  font-size: 12vw; /* Adjust the font size as desired */
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
@@ -36,14 +36,14 @@
 #options-container p {
   margin: 5px 0;
   color: #555;
-  font-size: 8vw; /* Adjust the font size as desired */
+  font-size: 10vw; /* Adjust the font size as desired */
 }
 
 /* CSS styles for the answer element */
 #answer {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 9vw; /* Adjust the font size as desired */
+  font-size: 12vw; /* Adjust the font size as desired */
   color: #008000;
   text-align: left; /* Align the answer to the left */
 }
