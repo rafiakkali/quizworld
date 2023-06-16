@@ -83,20 +83,20 @@
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
   #quiz-container {
-    width: 90vw; /* Adjust the width as desired for smaller screens */
-    height: calc(90vw * 3 / 4); /* Calculate height based on width and aspect ratio */
+    width: 100vw; /* Adjust the width as desired for smaller screens */
+    height: calc(100vw * 3 / 4); /* Calculate height based on width and aspect ratio */
   }
   
   #question {
-    font-size: 6vw; /* Adjust the font size as desired */
+    font-size: 7vw; /* Adjust the font size as desired */
   }
 
   #options-container p {
-    font-size: 5vw; /* Adjust the font size as desired */
+    font-size: 5.5vw; /* Adjust the font size as desired */
   }
 
   #answer {
-    font-size: 5.5vw; /* Adjust the font size as desired */
+    font-size: 6vw; /* Adjust the font size as desired */
   }
 
   #timer {
