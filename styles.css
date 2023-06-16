@@ -66,61 +66,20 @@
   outline: none;
 }
 
-/* CSS styles for the input container */
-#input-container {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  font-family: Calibri, Arial, sans-serif;
-}
-
-/* CSS styles for the text box and start button in the input container */
-#mcq-input {
-  width: 100%;
-  height: 150px;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
-  font-family: Calibri, Arial, sans-serif;
-}
-
-#start-quiz-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: Calibri, Arial, sans-serif;
-}
-
-#start-quiz-button:hover {
-  background-color: #45a049;
-}
-
-#start-quiz-button:focus {
-  outline: none;
-}
-
 /* Mobile-friendly styles */
 @media screen and (max-width: 480px) {
-  #quiz-container,
-  #input-container {
-    max-width: 90%;
+  #quiz-container {
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
   }
 
   #mcq-input {
     height: 100px;
+  }
+
+  #start-quiz-button {
+    width: 100%;
   }
 }
 
