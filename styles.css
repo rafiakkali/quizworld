@@ -84,7 +84,7 @@
 @media screen and (max-width: 768px) {
   #quiz-container {
     width: 90vw; /* Adjust the width as desired for smaller screens */
-    height: calc(90vw * 3 / 4); /* Calculate height based on width and aspect ratio */
+    height: calc(100vw * 3 / 4); /* Calculate height based on width and aspect ratio */
   }
   
   #question {
