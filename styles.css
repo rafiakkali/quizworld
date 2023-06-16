@@ -1,6 +1,7 @@
 /* CSS styles for the quiz container */
 #quiz-container {
   width: 75vw; /* Adjust the width as desired */
+  height: calc(75vw * 4 / 3); /* Calculate height based on width and aspect ratio */
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -10,7 +11,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 100%; /* Create a 3:4 aspect ratio */
 }
 
 /* CSS styles for the question and answer elements */
@@ -75,6 +75,7 @@
 @media screen and (max-width: 768px) {
   #quiz-container {
     width: 90vw; /* Adjust the width as desired for smaller screens */
+    height: calc(90vw * 4 / 3); /* Calculate height based on width and aspect ratio */
   }
   
   #question {
