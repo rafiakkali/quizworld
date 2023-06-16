@@ -1,9 +1,9 @@
 /* CSS styles for the quiz container */
 #quiz-container {
   width: 100vw;
-  height: calc(100vw * 4 / 3);
+  height: calc(100vw * 3 / 4);
   max-width: 100%;
-  max-height: calc(100vh - 20px);
+  max-height: 100vh;
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -18,11 +18,9 @@
 
 /* Rest of the CSS styles remain the same */
 
-
-
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 3vw; /* Adjust the font size as desired */
+  font-size: 3.5vw; /* Adjust the font size as desired */
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
@@ -35,20 +33,20 @@
 #options-container p {
   margin: 5px 0;
   color: #555;
-  font-size: 2.5vw; /* Adjust the font size as desired */
+  font-size: 3vw; /* Adjust the font size as desired */
 }
 
 /* CSS styles for the answer element */
 #answer {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 2.8vw; /* Adjust the font size as desired */
+  font-size: 3.2vw; /* Adjust the font size as desired */
   color: #008000;
 }
 
 /* CSS styles for the timer element */
 #timer {
-  font-size: 7vw; /* Adjust the font size as desired */
+  font-size: 5vw; /* Adjust the font size as desired */
   font-weight: bold;
   color: #FF4500;
   text-align: center;
@@ -62,7 +60,7 @@
   padding: 10px 20px;
   background-color: #4caf50;
   color: #fff;
-  font-size: 3vw; /* Adjust the font size as desired */
+  font-size: 3.5vw; /* Adjust the font size as desired */
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -82,7 +80,7 @@
 @media screen and (max-width: 768px) {
   #quiz-container {
     width: 90vw; /* Adjust the width as desired for smaller screens */
-    height: calc(90vw * 4 / 3); /* Calculate height based on width and aspect ratio */
+    height: calc(90vw * 3 / 4); /* Calculate height based on width and aspect ratio */
   }
   
   #question {
@@ -90,11 +88,11 @@
   }
 
   #options-container p {
-    font-size: 3vw; /* Adjust the font size as desired */
+    font-size: 3.5vw; /* Adjust the font size as desired */
   }
 
   #answer {
-    font-size: 3.5vw; /* Adjust the font size as desired */
+    font-size: 3.8vw; /* Adjust the font size as desired */
   }
 
   #timer {
