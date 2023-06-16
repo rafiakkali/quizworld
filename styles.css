@@ -11,7 +11,7 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
@@ -24,13 +24,14 @@
 #options-container p {
   margin: 5px 0;
   color: #555;
+  font-size: 16px;
 }
 
 /* CSS styles for the answer element */
 #answer {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #008000;
 }
 
