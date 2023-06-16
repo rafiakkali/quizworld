@@ -17,10 +17,12 @@ function startQuiz() {
 
   if (parsedQuestions.length > 0) {
     startButton.style.display = 'none';
+    mcqInput.style.display = 'none'; // Hide the text box
     quizContainer.style.display = 'block';
     showQuestion();
   }
 }
+
 
 function parseMCQData(mcqData) {
   const questions = mcqData.split(/\d+\.\s/).filter(q => q.trim() !== '');
