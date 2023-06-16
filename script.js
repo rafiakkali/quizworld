@@ -53,8 +53,8 @@ function showQuestion() {
 
   answerElement.textContent = ''; // Clear the answer
 
-  timerElement.textContent = '10';
-  let timeLeft = 10;
+  timerElement.textContent = '15';
+  let timeLeft = 15;
   timerInterval = setInterval(() => {
     timeLeft--;
     timerElement.textContent = timeLeft.toString().padStart(2, '0');
