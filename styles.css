@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
   overflow: hidden;
@@ -20,7 +20,7 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   font-family: Calibri, Arial, sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
