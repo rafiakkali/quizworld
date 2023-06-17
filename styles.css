@@ -1,9 +1,26 @@
+/* CSS styles for the overall website container */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#website-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 /* CSS styles for the quiz container */
 #quiz-container {
-  width: 100vw;
-  height: calc(100vw * 3 / 4);
+  width: 100%;
+  height: 100%;
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 100%;
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -15,56 +32,31 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Rest of the CSS styles remain the same */
 
-/* CSS styles for the question and answer elements */
-#question {
-  font-size: 5vw; /* Adjust the font size as desired */
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-  text-align: left; /* Align the question to the left */
-}
-
-#options-container {
+/* CSS styles for the text box */
+#text-box {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
   margin-bottom: 20px;
-  text-align: left; /* Align the options to the left */
-}
-
-#options-container p {
-  margin: 5px 0;
-  color: #555;
-  font-size: 4vw; /* Adjust the font size as desired */
-}
-
-/* CSS styles for the answer element */
-#answer {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 4.5vw; /* Adjust the font size as desired */
-  color: #008000;
-  text-align: left; /* Align the answer to the left */
-}
-
-/* CSS styles for the timer element */
-#timer {
-  font-size: 8vw; /* Adjust the font size as desired */
-  font-weight: bold;
-  color: #FF4500;
-  text-align: center;
-  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
 }
 
 /* CSS styles for the start button */
 #start-button {
-  display: block;
-  margin: 0 auto;
   padding: 10px 20px;
   background-color: #4caf50;
   color: #fff;
-  font-size: 5vw; /* Adjust the font size as desired */
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -80,26 +72,83 @@
   outline: none;
 }
 
+/* CSS styles for the question and answer elements */
+#question {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+}
+
+#options-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#options-container p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* CSS styles for the option containers */
+.option-container {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-container:hover {
+  background-color: #e0e0e0;
+}
+
+.correct-answer {
+  background-color: #008000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* CSS styles for the answer element */
+#answer {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #008000;
+  text-align: left;
+}
+
+/* CSS styles for the timer element */
+#timer {
+  font-size: 30px;
+  font-weight: bold;
+  color: #FF4500;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
   #quiz-container {
-    width: 100vw; /* Adjust the width as desired for smaller screens */
-    height: calc(100vw * 3 / 4); /* Calculate height based on width and aspect ratio */
+    padding: 10px;
   }
   
   #question {
-    font-size: 7vw; /* Adjust the font size as desired */
+    font-size: 16px;
   }
 
   #options-container p {
-    font-size: 5.5vw; /* Adjust the font size as desired */
+    font-size: 14px;
   }
 
   #answer {
-    font-size: 6vw; /* Adjust the font size as desired */
+    font-size: 16px;
   }
 
   #timer {
-    font-size: 9vw; /* Adjust the font size as desired */
+    font-size: 24px;
   }
 }
