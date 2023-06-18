@@ -99,18 +99,18 @@
   }
   
   #question {
-    font-size: 6vw;
+    font-size: 9vw;
   }
 
   #options-container p {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 
   #answer {
-    font-size: 4.5vw;
+    font-size: 7vw;
   }
 
   #timer {
-    font-size: 6vw;
+    font-size: 9vw;
   }
 }
