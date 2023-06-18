@@ -87,12 +87,17 @@
   text-align: left;
 }
 
+/* CSS styles for the timer element */
 #timer {
   font-size: 5vw;
   font-weight: bold;
   color: #FF4500;
   text-align: center;
   margin-top: 16px;
+}
+
+.hide {
+  display: none;
 }
 
 /* Mobile-friendly styles */
