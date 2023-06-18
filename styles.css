@@ -14,7 +14,7 @@
 /* CSS styles for the quiz container */
 #quiz-container {
   flex: 1;
-  padding: 16px;
+  padding: 4vw;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -35,55 +35,55 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 1.6vw;
   color: #333;
   text-align: left;
 }
 
 #options-container p {
-  margin: 4px 0;
+  margin: 1vw 0;
   color: #555;
-  font-size: 3vw;
+  font-size: 3.2vw;
 }
 
 #answer {
   font-weight: bold;
-  margin-bottom: 8px;
-  font-size: 3.5vw;
+  margin-bottom: 1.6vw;
+  font-size: 3.6vw;
   color: #008000;
   text-align: left;
 }
 
 #timer {
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-weight: bold;
   color: #FF4500;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 4vw;
 }
 
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
   #quiz-container {
-    padding: 8px;
+    padding: 2vw;
     height: 84.375vw; /* Adjusted height for 16:9 aspect ratio on mobile */
   }
   
   #question {
-    font-size: 7vw;
+    font-size: 9vw;
   }
 
   #options-container p {
-    font-size: 5vw;
+    font-size: 6.4vw;
   }
 
   #answer {
-    font-size: 5.5vw;
+    font-size: 7.2vw;
   }
 
   #timer {
-    font-size: 6vw;
+    font-size: 9vw;
   }
 }
