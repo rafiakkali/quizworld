@@ -23,6 +23,7 @@ function startQuiz() {
   }
 }
 
+
 function parseMCQData(mcqData) {
   const questions = mcqData.split(/\d+\.\s/).filter(q => q.trim() !== '');
   return questions.map(question => {
@@ -64,11 +65,12 @@ function showQuestion() {
   }, 1000);
 }
 
+
+
 function showAnswer() {
   const currentQuestion = parsedQuestions[currentQuestionIndex];
   answerElement.textContent = `Answer: ${currentQuestion.answer}`;
 
-  hideTimer(); // Hide the timer
   setTimeout(nextQuestion, 3000); // Move to the next question after 3 seconds
 }
 
@@ -85,9 +87,4 @@ function nextQuestion() {
     answerElement.textContent = '';
     timerElement.textContent = '00';
   }
-}
-
-// Function to hide the timer
-function hideTimer() {
-  timerElement.style.display = 'none';
 }
