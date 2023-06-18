@@ -9,6 +9,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Added */
 }
 
 /* CSS styles for the quiz container */
@@ -68,7 +69,7 @@
 @media screen and (max-width: 768px) {
   #quiz-container {
     padding: 2vw;
-    height: 84.375vw; /* Adjusted height for 16:9 aspect ratio on mobile */
+    height: auto; /* Allow height to expand based on content */
   }
   
   #question {
