@@ -41,9 +41,14 @@ function showQuestion() {
   const currentQuestion = parsedQuestions[currentQuestionIndex];
   const { question, options } = currentQuestion;
 
-  // Display the question and options
+  // Display the question
   questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${question}`;
+
+  // Clear and configure the options container
   optionsContainer.innerHTML = '';
+  optionsContainer.style.display = 'grid';
+  optionsContainer.style.gridTemplateColumns = '1fr 1fr'; // Display options in two columns
+
   options.forEach(option => {
     const optionContainer = document.createElement('div');
     optionContainer.classList.add('option-container');
@@ -70,46 +75,115 @@ function showQuestion() {
   }, 1000);
 }
 
-function showAnswer() {
-  const currentQuestion = parsedQuestions[currentQuestionIndex];
-  answerElement.textContent = `Answer: ${currentQuestion.answer}`;
+function adjustQuestionFontSize() {
+  const maxQuestionLength = 30; // Maximum number of characters for the question
+  const maxOptionLength = 20; // Maximum number of characters for each option
 
-  // Adjust font size for the question
-  const answerHeight = answerElement.offsetHeight;
-  const quizContainerHeight = quizContainer.offsetHeight;
-  const availableHeight = quizContainerHeight - answerHeight;
-  const fontSize = availableHeight / 10; // Adjust the divisor to control the scaling factor
-  const scaledFontSize = Math.min(fontSize, 3.5); // Limit the maximum font size
+  const questionLength = questionElement.textContent.length;
+  const optionsLength = Array.from(optionsContainer.querySelectorAll('.option-container p')).reduce((total, option) => total + option.textContent.length, 0);
+
+  const scaleFactor = Math.min(1, maxQuestionLength / questionLength, maxOptionLength / optionsLength);
+
+  let scaledFontSize = 3.5; // Adjust the initial font size
+
+  // Shrink the font size if the text exceeds the maximum length
+  if (questionLength > maxQuestionLength || optionsLength > maxOptionLength) {
+    scaledFontSize *= scaleFactor;
+  }
 
   // Set the font size for the question
   questionElement.style.fontSize = `${scaledFontSize}vw`;
 
+  // Set the font size for the options
+  const optionElements = optionsContainer.querySelectorAll('.option-container p');
+  optionElements.forEach(optionElement => {
+    optionElement.style.fontSize = `${scaledFontSize * 0.6}vw`; // Adjust the scaling factor as per your preference
+  });
+}
+
+function showAnswer() {
+  const currentQuestion = parsedQuestions[currentQuestionIndex];
+  answerElement.textContent = `Answer: ${currentQuestion.answer}`;
+
+  // Adjust the text length for answer
+  adjustText(answerElement, 100); // Adjust the maximum length as per your preference
+
   // Hide the timer
   timerElement.style.display = 'none';
 
-  // Delay for 4 seconds before moving to the next question
+  // Delay for 10 seconds before moving to the next question
   setTimeout(() => {
-    // Reset font size for the question
-    questionElement.style.fontSize = '4vw';
+    // Reset the text length for question and options
+    adjustText(questionElement, Infinity);
+    adjustText(optionsContainer, Infinity);
 
     // Show the timer
     timerElement.style.display = 'block';
 
     nextQuestion();
-  }, 4000); // 4000 milliseconds = 4 seconds
+  }, 4000); // 10000 milliseconds = 10 seconds
 }
 
+function adjustQuestionFontSize() {
+  const questionContainerWidth = questionElement.offsetWidth;
+  const optionsContainerWidth = optionsContainer.offsetWidth;
+  const containerWidth = Math.max(questionContainerWidth, optionsContainerWidth);
+  const availableWidth = containerWidth - 40; // Adjust the margin as per your layout
+
+  const questionWidth = questionElement.scrollWidth;
+  const optionsWidth = optionsContainer.scrollWidth;
+  const textWidth = Math.max(questionWidth, optionsWidth);
+  const scaleFactor = availableWidth / textWidth;
+
+  const scaledFontSize = scaleFactor * 3.5; // Adjust the initial font size
+
+  // Set the font size for the question
+  questionElement.style.fontSize = `${scaledFontSize}vw`;
+
+  // Set the font size for the options
+  const optionElements = optionsContainer.querySelectorAll('.option-container p');
+  optionElements.forEach(optionElement => {
+    optionElement.style.fontSize = `${scaledFontSize * 0.6}vw`; // Adjust the scaling factor as per your preference
+  });
+}
+
+function truncateText(element, maxLength) {
+  const text = element.textContent;
+  if (text.length > maxLength) {
+    element.textContent = text.slice(0, maxLength) + '...';
+  }
+}
+
+function adjustText(container, maxLength) {
+  const elements = container.querySelectorAll('p');
+  elements.forEach(element => {
+    truncateText(element, maxLength);
+  });
+}
+
+// Call adjustQuestionFontSize() after rendering the question and options
+showQuestion();
+
+// Call adjustQuestionFontSize() on window resize event
+window.addEventListener('resize', adjustQuestionFontSize);
 
 function nextQuestion() {
   currentQuestionIndex++;
 
   if (currentQuestionIndex < parsedQuestions.length) {
     showQuestion();
-  } else {
-    // Quiz ended
-    questionElement.textContent = 'Quiz ended';
-    optionsContainer.innerHTML = '';
-    answerElement.textContent = '';
-    timerElement.textContent = '00';
-  }
+  }else {
+  // Quiz ended
+  questionElement.textContent = 'Thank you!...';
+  optionsContainer.innerHTML = '';
+  answerElement.textContent = '';
+  timerElement.textContent = '';
+
+  questionElement.style.display = 'flex';
+  questionElement.style.alignItems = 'center';
+  questionElement.style.justifyContent = 'center';
+  questionElement.style.fontSize = '5vw'; // Adjust the font size as per your preference
+
+}
+
 }
