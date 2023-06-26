@@ -3,6 +3,79 @@
 <head>
   <title>MCQ Quiz</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    /* Mobile-friendly styles */
+      @media screen and (max-width: 768px) and (max-aspect-ratio: 9/16) {
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #f5f5f5;
+          font-family: Arial, sans-serif;
+        }
+
+        #quiz-container {
+          max-width: 100vw;
+          height: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #question {
+          font-size: 10vw;
+          font-weight: bold;
+          margin-bottom: 20px;
+          color: #333;
+          text-align: center;
+        }
+
+        #options-container {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .option-container {
+          flex: 0 0 calc(50% - 20px);
+          margin: 10px;
+          padding: 16px;
+          border-radius: 8px;
+          background-color: #f0f0f0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          color: #333;
+          text-align: center;
+          font-size: 9vw;
+        }
+
+       
+
+        #answer {
+          font-size: 10vw;
+          font-weight: bold;
+          margin-bottom: 20px;
+          color: #008000;
+          text-align: center;
+        }
+
+        #timer {
+          font-size: 9vw;
+          font-weight: bold;
+          color: #ff4500;
+          margin-top: 20px;
+        }
+      }
+         </style>
 </head>
 <body>
   <div id="input-container">
@@ -14,7 +87,9 @@
     <div id="options-container"></div>
     <p id="answer"></p>
     <div id="timer">00</div>
+      
   </div>
+    
 
   <script src="script.js"></script>
 </body>
