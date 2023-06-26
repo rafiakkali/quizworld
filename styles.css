@@ -85,9 +85,8 @@
   display: none;
 }
 
-/* Mobile-friendly styles */
-/* Mobile-friendly styles */
-@media screen and (max-aspect-ratio: 9/16), screen and (max-width: 768px) {
+/* Mobile-friendly styles for 9:16 aspect ratio */
+@media screen and (max-aspect-ratio: 9/16) {
   #quiz-container {
     padding: 10px;
   }
@@ -97,21 +96,30 @@
   }
 
   #options-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
   }
 
   .option-container {
     justify-content: center;
     font-size: 5vw;
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
   }
 
   #answer {
     font-size: 4.5vw;
   }
 
+  #timer {
+    font-size: 6vw;
+  }
+}
   #timer {
     font-size: 6vw;
   }
